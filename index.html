@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Inspirado no G1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #c4170c;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .highlight-news {
+            flex: 1 1 100%;
+            margin-bottom: 20px;
+        }
+        .news-section {
+            flex: 1 1 calc(50% - 10px);
+            margin: 5px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .news-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>G1 Clone</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Brasil</a></li>
+                <li><a href="#">Mundo</a></li>
+                <li><a href="#">Economia</a></li>
+                <li><a href="#">Tecnologia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section class="highlight-news">
+            <h2>Notícia em Destaque: Novo Marco Econômico</h2>
+            <img src="https://via.placeholder.com/800x400" alt="Imagem de destaque">
+            <p>O mercado financeiro brasileiro registra nova alta impulsionada por investimentos estrangeiros. Especialistas preveem crescimento contínuo nos próximos meses.</p>
+        </section>
+        
+        <section class="news-section">
+            <h3>Política: Reforma Tributária em Discussão</h3>
+            <img src="https://via.placeholder.com/400x200" alt="Imagem de política">
+            <p>O Congresso discute as propostas para a nova reforma tributária, buscando simplificar o sistema de impostos no Brasil.</p>
+        </section>
+        <section class="news-section">
+            <h3>Mundo: Tensão Aumenta na Europa</h3>
+            <img src="https://via.placeholder.com/400x200" alt="Imagem de notícia internacional">
+            <p>Conflitos diplomáticos entre países da União Europeia e novas sanções econômicas estão no centro das atenções globais.</p>
+        </section>
+        <section class="news-section">
+            <h3>Economia: Preço do Petróleo Sobe</h3>
+            <img src="https://via.placeholder.com/400x200" alt="Imagem de economia">
+            <p>O preço do barril de petróleo atinge novos recordes, afetando os custos de transporte e produção mundial.</p>
+        </section>
+        <section class="news-section">
+            <h3>Tecnologia: Lançamento de Novo Smartphone</h3>
+            <img src="https://via.placeholder.com/400x200" alt="Imagem de tecnologia">
+            <p>A nova versão do smartphone mais popular chega ao mercado com câmera revolucionária e maior duração de bateria.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Clone G1 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
