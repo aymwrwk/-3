@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clone do site G1, trazendo notícias diárias.">
+    <meta name="keywords" content="notícias, clone G1, Brasil, mundo, economia, esportes">
     <title>Notícias Diárias - Clone G1</title>
     <style>
         body {
@@ -14,24 +16,106 @@
             line-height: 1.6;
             color: #333;
         }
-        header {
-            background-color: #e71c24;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+
+        @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .headline h2 {
+        font-size: 1.5em;
+
+
+    }
+
+    header{
+      
+    }
+}
+
+
+header {
+    background-color: #e71c24; /* Vermelho G1 */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px; /* Alinhamento com o restante do site */
+}
+
+header .logo {
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    
+    font-weight: bold;
+    margin: 0;
+}
+
+header .menu-btn {
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header .search-bar {
+    color: white;
+    display: flex;
+    align-items: center;
+ 
+border-radius: 5px;
+    overflow: hidden;
+   
+    width: 200px; /* Tamanho fixo, ajuste conforme necessário */
+    transition: width 0.3s ease; /* Animação ao expandir */
+}
+
+header .search-bar:hover {
+    width: 250px; /* Expande ao passar o mouse */
+}
+
+
+header .search-bar input {
+
+    color: white !important;
+    background-color: #0000005e; /* Vermelho do G1 */
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    flex: 1; /* Preenche o espaço */
+    border-radius: 0; /* Remove bordas arredondadas extras */
+}
+
+header .search-bar button {
+    
+   
+}
+
+header .search-bar button:hover {
+    background-color: #b3121a; /* Efeito hover mais escuro */
+}
+
         header h1 {
             font-size: 2.5em;
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            text-transform: uppercase;
+           
         }
         nav ul {
             list-style: none;
@@ -53,7 +137,7 @@
             background-color: #b3121a;
         }
         .breadcrumb {
-            background-color: #f4f4f4;
+          
             padding: 8px 20px;
             font-size: 0.9em;
             color: #666;
@@ -161,21 +245,28 @@
         footer p {
             margin: 0;
         }
+
+        header .search-bar input::placeholder {
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>g1</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Brasil</a></li>
-                <li><a href="#">Mundo</a></li>
-                <li><a href="#">Economia</a></li>
-                <li><a href="#">Esportes</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="menu-btn">MENU</div>
+            <h1 class="logo">g1</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar"/>
+                <button>Buscar</button>
+            </div>
+        </div>
     </header>
+    
 
     <div class="breadcrumb">
         <a href="#">DISTRITO FEDERAL</a>
@@ -228,6 +319,18 @@
 
     <footer>
         <p>&copy; 2025 g1 Clone - Todos os direitos reservados.</p>
+
+        
     </footer>
+  
+
+    <script>
+        document.querySelectorAll('.social-share a').forEach(link => {
+            link.addEventListener('click', () => {
+                alert('Compartilhar ainda não implementado.');
+            });
+        });
+    </script>
+    
 </body>
 </html>
